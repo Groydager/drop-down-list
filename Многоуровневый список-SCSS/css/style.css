@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/*Обнуляет отступы */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*,
+* :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Придает блочные значения */
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+/*  Уравнивает поведение шрифтов и элементов для разных браузеров */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Наследование семейство шрифта */
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input ::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: sans-serif, Arial, Helvetica;
+  height: 100vh;
+  background: url("../img/background-p2.webp") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  background-color: rgb(85, 138, 243);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20%;
+  -webkit-box-shadow: 0 5px 10px rgb(58, 58, 244);
+          box-shadow: 0 5px 10px rgb(58, 58, 244);
+}
+
+.container .logo {
+  width: 80px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .logo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.nav ul li {
+  position: relative;
+  float: left;
+}
+.nav ul li a {
+  padding: 15px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.nav ul li a:hover {
+  color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.nav ul li ul {
+  position: absolute;
+  left: 0;
+  width: 180px;
+  background-color: rgb(79, 101, 244);
+  display: none;
+}
+.nav ul li ul li {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.nav ul li ul li ul {
+  left: 180px;
+  top: 0px;
+}
+
+ul li:hover > ul {
+  display: initial;
+}
